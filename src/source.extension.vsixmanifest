@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="dcf84938-593b-49d8-9dff-d6014632e44e" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
-        <DisplayName>Ionic Snippet Pack</DisplayName>
-        <Description xml:space="preserve">A snippet pack to make you more productive working with the Ionic Framework</Description>
+        <DisplayName>Ionic Pack</DisplayName>
+        <Description xml:space="preserve">An extension to make you more productive working with the Ionic Framework</Description>
         <MoreInfo>https://github.com/madskristensen/IonicSnippetPack</MoreInfo>
         <License>Resources\LICENSE</License>
         <Icon>Resources\Icon.png</Icon>
@@ -11,11 +11,10 @@
         <Tags>snippets, Ionic framework, cordova, angular</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="14.0" />
     </Installation>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="snippets.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" Path="|%CurrentProject%|" />
     </Assets>
 </PackageManifest>

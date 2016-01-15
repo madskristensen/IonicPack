@@ -1,4 +1,4 @@
-## Ionic Snippet Pack for Visual Studio
+# Ionic Snippet Pack for Visual Studio
 
 [![Build status](https://ci.appveyor.com/api/projects/status/qogg94i8nry0g0j7?svg=true)](https://ci.appveyor.com/project/madskristensen/javascriptsnippetpack)
 
@@ -12,6 +12,7 @@ or get the
 A snippet pack to make you more productive working with
 the Ionic Framework for Apache Cordova.
 
+## Intellisense
 It adds Intellisense for the Ionic directives in the HTML
 editor.
 
