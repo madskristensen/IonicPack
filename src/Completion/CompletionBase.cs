@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Windows.Media;
@@ -8,12 +9,15 @@ using IonicPack.Schema;
 using Microsoft.Html.Editor.Completion;
 using Microsoft.Html.Editor.Completion.Def;
 using Microsoft.VisualStudio.Language.Intellisense;
+using Microsoft.Web.Editor.Imaging;
 
 namespace IonicPack.Completion
 {
     abstract class CompletionBase : IHtmlCompletionListProvider
     {
         ImageSource _icon = GetIcon();
+        ImageSource _glyph = GlyphService.GetGlyph(StandardGlyphGroup.GlyphGroupField, StandardGlyphItem.GlyphItemPublic);
+
 
         public abstract string CompletionType { get; }
 
@@ -38,14 +42,19 @@ namespace IonicPack.Completion
 
             foreach (IHtmlItem item in items)
             {
-                var entry = new HtmlCompletion(item.Name, item.Name, item.Description, _icon, null, context.Session as ICompletionSession);
+                string description = item.Description;
+
+                if (!string.IsNullOrEmpty(item.Type))
+                    description += Environment.NewLine + Environment.NewLine + "Type: " + CultureInfo.CurrentCulture.TextInfo.ToTitleCase(item.Type);
+
+                var entry = new HtmlCompletion(item.Name, item.Name, description.Trim(), _icon, null, context.Session as ICompletionSession);
                 list.Add(entry);
             }
 
             return list;
         }
 
-        protected IList<HtmlCompletion> AddEntries(HtmlCompletionContext context, IEnumerable<string> items)
+        protected IList<HtmlCompletion> AddAttributeValues(HtmlCompletionContext context, IEnumerable<string> items)
         {
             var list = new List<HtmlCompletion>();
 
@@ -54,7 +63,7 @@ namespace IonicPack.Completion
 
             foreach (string item in items)
             {
-                var entry = new HtmlCompletion(item, item, "", _icon, null, context.Session as ICompletionSession);
+                var entry = new HtmlCompletion(item, item, "", _glyph, null, context.Session as ICompletionSession);
                 list.Add(entry);
             }
 

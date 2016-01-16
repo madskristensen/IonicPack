@@ -8,6 +8,8 @@ namespace IonicPack.Schema
 
         public string Description { get; set; }
 
+        public string Type { get; set; }
+
         public string Require { get; set; }
 
         public IEnumerable<string> Values { get; set; }

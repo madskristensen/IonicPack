@@ -5,30 +5,193 @@
     "attributes": [
       {
         "name": "collection-repeat",
-        "description": "The expression indicating how to enumerate a collection, of the format variable in expression – where variable is the user defined loop variable and expression is a scope expression giving the collection to enumerate."
+        "description": "The expression indicating how to enumerate a collection, of the format variable in expression – where variable is the user defined loop variable and expression is a scope expression giving the collection to enumerate.",
+        "type": "expression"
       },
       {
         "name": "item-width",
         "description": "The width of the repeated element. The expression must return a number (pixels) or a percentage. Defaults to the width of the first item in the list.",
+        "type": "expression",
         "require": "collection-repeat"
       },
       {
         "name": "item-height",
         "description": "The height of the repeated element. The expression must return a number (pixels) or a percentage. Defaults to the height of the first item in the list",
+        "type": "expression",
         "require": "collection-repeat"
       },
       {
         "name": "item-render-buffer",
         "description": "The number of items to load before and after the visible items in the list. Default 3.",
+        "type": "number",
         "require": "collection-repeat"
       },
       {
         "name": "force-image-refresh",
         "description": "Force images to refresh as you scroll. This fixes a problem where, when an element is interchanged as scrolling, its image will still have the old src while the new src loads. Setting this to true comes with a small performance loss.",
+        "type": "boolean",
         "values": [ "true", "false" ],
         "require": "collection-repeat"
+      },
+      {
+        "name": "nav-transition",
+        "description": "The transition type which the nav view transition should use when it animates.",
+        "type": "enum",
+        "values": [ "ios", "android", "none" ]
+      },
+      {
+        "name": "nav-direction",
+        "description": "The direction which the nav view transition should animate.",
+        "type": "enum",
+        "values": [ "forward", "back", "enter", "exit", "swap" ]
+      },
+      {
+        "name": "menu-toggle",
+        "description": "Toggle a side menu on the given side.",
+        "type": "enum",
+        "values": [ "left", "right" ]
+      },
+      {
+        "name": "menu-close",
+        "description": "menu-close is an attribute directive that closes a currently opened side menu."
+      },
+      {
+        "name": "data-tap-disabled",
+        "description": "Disables the tap for an element and all of its children elements",
+        "type": "boolean",
+        "values": [ "true", "false" ]
       }
     ]
+  },
+  {
+    "name": "ion-content",
+    "description": "",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this scrollView with $ionicScrollDelegate.",
+        "type": "string"
+      },
+      {
+        "name": "direction",
+        "description": "Which way to scroll.",
+        "type": "enum",
+        "values": [ "x", "y", "xy" ]
+      },
+      {
+        "name": "locking",
+        "description": "Whether to lock scrolling in one direction at a time. Useful to set to false when zoomed in or scrolling in two directions.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "paging",
+        "description": "Whether to scroll with paging.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "scroll",
+        "description": "Whether to allow scrolling of content. Defaults to true.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "overflow-scroll",
+        "description": "Whether to use overflow-scrolling instead of Ionic scroll.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "scrollbar-x",
+        "description": "Whether to show the horizontal scrollbar.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "scrollbar-y",
+        "description": "Whether to show the vertical scrollbar.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "start-x",
+        "description": "Initial horizontal scroll position. Default 0.",
+        "type": "string"
+      },
+      {
+        "name": "start-y",
+        "description": "Initial vertical scroll position. Default 0.",
+        "type": "string"
+      },
+      {
+        "name": "on-scroll",
+        "description": "Called whenever the user scrolls.",
+        "type": "expression"
+      },
+      {
+        "name": "on-scroll-complete",
+        "description": "Expression to evaluate when a scroll action completes. Has access to 'scrollLeft' and 'scrollTop' locals.",
+        "type": "expression"
+      },
+      {
+        "name": "has-bouncing",
+        "description": "Whether to allow scrolling to bounce past the edges of the content. Defaults to true on iOS, false on Android.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "scroll-event-interval",
+        "description": "Number of milliseconds between each firing of the 'on-scroll' expression. Default 10.",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "name": "ion-refresher",
+    "description": "",
+    "attributes": [
+      {
+        "name": "on-refresh",
+        "description": "Called when the user pulls down enough and lets go of the refresher.",
+        "type": "expression"
+      },
+      {
+        "name": "on-pulling",
+        "description": "Called when the user starts to pull down on the refresher.",
+        "type": "expression"
+      },
+      {
+        "name": "pulling-text",
+        "description": "The text to display while the user is pulling down.",
+        "type": "string"
+      },
+      {
+        "name": "pulling-icon",
+        "description": "The icon to display while the user is pulling down. Default: 'ion-android-arrow-down'.",
+        "type": "string"
+      },
+      {
+        "name": "spinner",
+        "description": "The ionSpinner icon to display after user lets go of the refresher. The SVG ionSpinner is now the default, replacing rotating font icons. Set to none to disable both the spinner and the icon.",
+        "type": "string"
+      },
+      {
+        "name": "refreshing-icon",
+        "description": "The font icon to display after user lets go of the refresher. This is depreicated in favor of the SVG ionSpinner.",
+        "type": "string"
+      },
+      {
+        "name": "disable-pulling-rotation",
+        "description": "Disables the rotation animation of the pulling icon when it reaches its activated threshold. To be used with a custom pulling-icon.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-pane",
+    "description": "A simple container that fits content, with no side effects."
   },
   {
     "name": "ion-list",
@@ -37,26 +200,29 @@
       {
         "name": "delegate-handle",
         "description": "The handle used to identify this list with $ionicListDelegate.",
-        "values": [ ]
+        "type": "string"
       },
       {
         "name": "type",
         "description": "The type of list to use (list-inset or card).",
-        "values": [ ]
+        "type": "string"
       },
       {
         "name": "show-delete",
         "description": "Whether the delete buttons for the items in the list are currently shown or hidden.",
+        "type": "boolean",
         "values": [ "true", "false" ]
       },
       {
         "name": "show-reorder",
         "description": "Whether the reorder buttons for the items in the list are currently shown or hidden.",
+        "type": "boolean",
         "values": [ "true", "false" ]
       },
       {
         "name": "can-swipe",
         "description": "Whether the items in the list are allowed to be swiped to reveal option buttons. Default: true.",
+        "type": "boolean",
         "values": [ "true", "false" ]
       }
     ]
@@ -82,5 +248,415 @@
   {
     "name": "ion-option-button",
     "description": ""
+  },
+  {
+    "name": "ion-header-bar",
+    "description": ""
+  },
+  {
+    "name": "ion-footer-bar",
+    "description": ""
+  },
+  {
+    "name": "ion-nav-view",
+    "description": "The ionNavView directive is used to render templates in your application.",
+    "attributes": [
+      {
+        "name": "name",
+        "description": "A view name. The name should be unique amongst the other views in the same state. You can have views of the same name that live in different states.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "ion-view",
+    "description": "A container for view content and any navigational and header bar information.",
+    "attributes": [
+      {
+        "name": "view-title",
+        "description": "A text-only title to display on the parent ionNavBar. For an HTML title, such as an image, see ionNavTitle instead.",
+        "type": "string"
+      },
+      {
+        "name": "cache-view",
+        "description": "If this view should be allowed to be cached or not. Please see the Caching section in ionNavView for more info.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "can-swipe-back",
+        "description": "If this view should be allowed to use the swipe to go back gesture or not. This does not enable the swipe to go back feature if it is not available for the platform it's running from, or there isn't a previous view.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "hide-back-button",
+        "description": "Whether to hide the back button on the parent ionNavBar by default.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "hide-nav-bar",
+        "description": "Whether to hide the parent ionNavBar by default.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-nav-bar",
+    "description": "",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this navBar with $ionicNavBarDelegate.",
+        "type": "string"
+      },
+      {
+        "name": "align-title",
+        "description": "Where to align the title of the navbar.",
+        "type": "enum",
+        "values": [ "left", "right", "center" ]
+      },
+      {
+        "name": "no-tap-scroll",
+        "description": "By default, the navbar will scroll the content to the top when tapped. Set no-tap-scroll to true to disable this behavior.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-nav-bar-button",
+    "description": "Creates a back button inside an ionNavBar."
+  },
+  {
+    "name": "ion-nav-buttons",
+    "description": "Use nav buttons to set the buttons on your ionNavBar from within an ionView",
+    "attributes": [
+      {
+        "name": "side",
+        "description": "The side to place the buttons in the ionNavBar.",
+        "type": "enum",
+        "values": [ "primary", "secondary", "left", "right" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-nav-title",
+    "description": "The nav title directive replaces an ionNavBar title text with custom HTML from within an ionView template."
+  },
+  {
+    "name": "ion-popover-view",
+    "description": "The Popover is a view that floats above an app's content."
+  },
+  {
+    "name": "ion-scroll",
+    "description": "Creates a scrollable container for all content inside.",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this scrollView with $ionicScrollDelegate.",
+        "type": "string"
+      },
+      {
+        "name": "direction",
+        "description": "Which way to scroll.",
+        "type": "enum",
+        "values": [ "x", "y", "xy" ]
+      },
+      {
+        "name": "locking",
+        "description": "Whether to lock scrolling in one direction at a time. Useful to set to false when zoomed in or scrolling in two directions.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "paging",
+        "description": "Whether to scroll with paging.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "on-refresh",
+        "description": "Called on pull-to-refresh, triggered by an ionRefresher.",
+        "type": "expression"
+      },
+      {
+        "name": "on-scroll",
+        "description": "Called whenever the user scrolls.",
+        "type": "expression"
+      },
+      {
+        "name": "scrollbar-x",
+        "description": "Whether to show the horizontal scrollbar.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "scrollbar-y",
+        "description": "Whether to show the vertical scrollbar.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "zooming",
+        "description": "Whether to support pinch-to-zoom",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "min-zoom",
+        "description": "The smallest zoom amount allowed (default is 0.5).",
+        "type": "number"
+      },
+      {
+        "name": "max-zoom",
+        "description": "The largest zoom amount allowed (default is 3).",
+        "type": "number"
+      },
+      {
+        "name": "has-bouncing",
+        "description": "Whether to allow scrolling to bounce past the edges of the content. Defaults to true on iOS, false on Android.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-infinite-scroll",
+    "description": "The ionInfiniteScroll directive allows you to call a function whenever the user gets to the bottom of the page or near the bottom of the page.",
+    "attributes": [
+      {
+        "name": "on-infinite",
+        "description": "What to call when the scroller reaches the bottom.",
+        "type": "expression"
+      },
+      {
+        "name": "distance",
+        "description": "The distance from the bottom that the scroll must reach to trigger the on-infinite expression. Default: 1%.",
+        "type": "string"
+      },
+      {
+        "name": "spinner",
+        "description": "The ionSpinner to show while loading. The SVG ionSpinner is now the default, replacing rotating font icons.",
+        "type": "string"
+      },
+      {
+        "name": "icon",
+        "description": "The icon to show while loading. Default: 'ion-load-d'. This is depreicated in favor of the SVG ionSpinner.",
+        "type": "string"
+      },
+      {
+        "name": "immediate-check",
+        "description": "Whether to check the infinite scroll bounds immediately on load.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-side-menus",
+    "description": "A container element for side menu(s) and the main content. Allows the left and/or right side menu to be toggled by dragging the main content area side to side.",
+    "attributes": [
+      {
+        "name": "enable-menu-with-back-views",
+        "description": "Determines whether the side menu is enabled when the back button is showing.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this list with $ionicListDelegate.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "ion-side-menu-content",
+    "description": "A container for the main visible content, sibling to one or more ionSideMenu directives.",
+    "attributes": [
+      {
+        "name": "drag-content",
+        "description": "Whether the content can be dragged.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "edge-drag-threshold",
+        "description": "Whether the content drag can only start if it is below a certain threshold distance from the edge of the screen."
+      }
+    ]
+  },
+  {
+    "name": "ion-side-menu",
+    "description": "A container for a side menu, sibling to an ionSideMenuContent directive.",
+    "attributes": [
+      {
+        "name": "side",
+        "description": "Which side the side menu is currently on",
+        "type": "enum",
+        "values": [ "left", "right" ]
+      },
+      {
+        "name": "is-enabled",
+        "description": "Whether this side menu is enabled.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "width",
+        "description": "How many pixels wide the side menu should be. Defaults to 275.",
+        "type": "number"
+      },
+      {
+        "name": "expose-aside-when",
+        "description": "Whether this side menu is enabled.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-slide-box",
+    "description": "A container for a side menu, sibling to an ionSideMenuContent directive.",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this slideBox with $ionicSlideBoxDelegate.",
+        "type": "string"
+      },
+      {
+        "name": "does-continue",
+        "description": "Whether the slide box should loop.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "auto-play",
+        "description": "Whether the slide box should automatically slide. Default true if does-continue is true.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "slide-interval",
+        "description": "How many milliseconds to wait to change slides (if does-continue is true). Defaults to 4000.",
+        "type": "number"
+      },
+      {
+        "name": "show-pager",
+        "description": "Whether a pager should be shown for this slide box. Accepts expressions via show-pager=\"\". Defaults to true.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "pager-click",
+        "description": "Expression to call when a pager is clicked (if show-pager is true). Is passed the 'index' variable.",
+        "type": "expression"
+      },
+      {
+        "name": "on-slide-changed",
+        "description": "Expression called whenever the slide is changed. Is passed an '$index' variable.",
+        "type": "expression"
+      },
+      {
+        "name": "active-slide",
+        "description": "Model to bind the current slide index to.",
+        "type": "expression"
+      }
+    ]
+  },
+  {
+    "name": "ion-slide",
+    "description": "Displays a slide inside of a slidebox."
+  },
+  {
+    "name": "ion-spinner",
+    "description": "The ionSpinner directive provides a variety of animated spinners.",
+    "attributes": [
+      {
+        "name": "icon",
+        "description": "By setting the icon attribute, you can specify which spinner to use, no matter what the platform is.",
+        "type": "enum",
+        "values": [ "android", "ios", "ios-small", "bubbles", "circles", "crescent", "dots", "lines", "ripple", "spiral" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-tabs",
+    "description": "Powers a multi-tabbed interface with a Tab Bar and a set of 'pages' that can be tabbed through",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify these tabs with $ionicTabsDelegate.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "ion-tab",
+    "description": "Contains a tab’s content. The content only exists while the given tab is selected.",
+    "attributes": [
+      {
+        "name": "title",
+        "description": "The title of the tab.",
+        "type": "string"
+      },
+      {
+        "name": "href",
+        "description": "The link that this tab will navigate to when tapped.",
+        "type": "string"
+      },
+      {
+        "name": "icon",
+        "description": "The icon of the tab. If given, this will become the default for icon-on and icon-off.",
+        "type": "string"
+      },
+      {
+        "name": "icon-on",
+        "description": "The icon of the tab while it is selected.",
+        "type": "string"
+      },
+      {
+        "name": "icon-off",
+        "description": "The icon of the tab while it is not selected.",
+        "type": "string"
+      },
+      {
+        "name": "badge",
+        "description": "The badge to put on this tab (usually a number).",
+        "type": "expression"
+      },
+      {
+        "name": "badge",
+        "description": "The badge to put on this tab (usually a number).",
+        "type": "expression"
+      },
+      {
+        "name": "badge-style",
+        "description": "The style of badge to put on this tab (eg: badge-positive).",
+        "type": "expression"
+      },
+      {
+        "name": "on-select",
+        "description": "Called when this tab is selected.",
+        "type": "expression"
+      },
+      {
+        "name": "on-deselect",
+        "description": "Called when this tab is deselected.",
+        "type": "expression"
+      },
+      {
+        "name": "hidden",
+        "description": "Whether the tab is to be hidden or not.",
+        "type": "expression"
+      },
+      {
+        "name": "disabled",
+        "description": "Whether the tab is to be disabled or not.",
+        "type": "expression"
+      }
+    ]
   }
 ]

@@ -48,7 +48,7 @@ namespace IonicPack.Completion
 
             var attr = attributes.SingleOrDefault(a => a.Name == attrName);
 
-            return AddEntries(context, attr?.Values);
+            return AddAttributeValues(context, attr?.Values);
         }
     }
 }
