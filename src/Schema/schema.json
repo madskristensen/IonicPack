@@ -1,0 +1,86 @@
+﻿// Get list here http://ionicframework.com/docs/api/directive/ionList/
+[
+  {
+    "name": "*",
+    "attributes": [
+      {
+        "name": "collection-repeat",
+        "description": "The expression indicating how to enumerate a collection, of the format variable in expression – where variable is the user defined loop variable and expression is a scope expression giving the collection to enumerate."
+      },
+      {
+        "name": "item-width",
+        "description": "The width of the repeated element. The expression must return a number (pixels) or a percentage. Defaults to the width of the first item in the list.",
+        "require": "collection-repeat"
+      },
+      {
+        "name": "item-height",
+        "description": "The height of the repeated element. The expression must return a number (pixels) or a percentage. Defaults to the height of the first item in the list",
+        "require": "collection-repeat"
+      },
+      {
+        "name": "item-render-buffer",
+        "description": "The number of items to load before and after the visible items in the list. Default 3.",
+        "require": "collection-repeat"
+      },
+      {
+        "name": "force-image-refresh",
+        "description": "Force images to refresh as you scroll. This fixes a problem where, when an element is interchanged as scrolling, its image will still have the old src while the new src loads. Setting this to true comes with a small performance loss.",
+        "values": [ "true", "false" ],
+        "require": "collection-repeat"
+      }
+    ]
+  },
+  {
+    "name": "ion-list",
+    "description": "The List is a widely used interface element in almost any mobile app, and can include content ranging from basic text all the way to buttons, toggles, icons, and thumbnails.",
+    "attributes": [
+      {
+        "name": "delegate-handle",
+        "description": "The handle used to identify this list with $ionicListDelegate.",
+        "values": [ ]
+      },
+      {
+        "name": "type",
+        "description": "The type of list to use (list-inset or card).",
+        "values": [ ]
+      },
+      {
+        "name": "show-delete",
+        "description": "Whether the delete buttons for the items in the list are currently shown or hidden.",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "show-reorder",
+        "description": "Whether the reorder buttons for the items in the list are currently shown or hidden.",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "can-swipe",
+        "description": "Whether the items in the list are allowed to be swiped to reveal option buttons. Default: true.",
+        "values": [ "true", "false" ]
+      }
+    ]
+  },
+  {
+    "name": "ion-item",
+    "description": ""
+  },
+  {
+    "name": "ion-delete-button",
+    "description": ""
+  },
+  {
+    "name": "ion-reorder-button",
+    "description": "",
+    "attributes": [
+      {
+        "name": "on-reorder",
+        "description": "Expression to call when an item is reordered. Parameters given: $fromIndex, $toIndex."
+      }
+    ]
+  },
+  {
+    "name": "ion-option-button",
+    "description": ""
+  }
+]
