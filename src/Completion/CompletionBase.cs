@@ -18,7 +18,6 @@ namespace IonicPack.Completion
         ImageSource _icon = GetIcon();
         ImageSource _glyph = GlyphService.GetGlyph(StandardGlyphGroup.GlyphGroupField, StandardGlyphItem.GlyphItemPublic);
 
-
         public abstract string CompletionType { get; }
 
         public abstract IList<HtmlCompletion> GetEntries(HtmlCompletionContext context);
