@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace IonicPack.Schema
+namespace IonicPack.HTML
 {
     class HtmlCache
     {
@@ -13,7 +13,7 @@ namespace IonicPack.Schema
         {
             string assembly = Assembly.GetExecutingAssembly().Location;
             string folder = Path.GetDirectoryName(assembly);
-            string source = Path.Combine(folder, "Schema\\schema.json");
+            string source = Path.Combine(folder, "HTML\\Schema\\schema.json");
 
             string content = File.ReadAllText(source);
             return JsonConvert.DeserializeObject<List<HtmlElement>>(content);

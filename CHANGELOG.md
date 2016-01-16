@@ -2,7 +2,8 @@
 
 - [ ] JavaScript Intellisense enhancements
 - [ ] Add screenshot of JS intellisense to [readme](README.md#javascript)
-- [ ] Add missing descriptions to HTML elements
+- [ ] Add missing JavaScript snippets
+- [ ] Add missing HTML snippets
 
 Features that have a checkmark are complete and available for
 download in the
@@ -18,5 +19,7 @@ on the official Visual Studio extension gallery.
 **2016-01-16**
 
 - [x] Initial version
+- [x] HTML snippets infrastructure
 - [x] HTML Intellisense for Ionic directives
 - [x] HTML validation of Ionic attribute values
+- [x] JavaScript snippets infrastructure

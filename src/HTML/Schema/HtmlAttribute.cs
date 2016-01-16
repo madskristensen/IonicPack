@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IonicPack.Schema
+namespace IonicPack.HTML
 {
     public class HtmlAttribute : IHtmlItem
     {

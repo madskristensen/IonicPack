@@ -1,0 +1,25 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ionAlert</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ionAlert</Shortcut>
+        <Description>An alert dialog</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Code Language="JavaScript">
+            <![CDATA[$$scope.showAlert = function () {
+    var alertPopup = $$ionicPopup.alert({
+        title: 'Don\'t eat that!',
+        template: 'It might taste good'
+    });
+
+    alertPopup.then(function (res) {
+        console.log('Thank you for not eating my delicious ice cream cone');
+    });
+};$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

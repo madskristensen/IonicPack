@@ -1,4 +1,4 @@
-﻿namespace IonicPack.Schema
+﻿namespace IonicPack.HTML
 {
     public interface IHtmlItem
     {

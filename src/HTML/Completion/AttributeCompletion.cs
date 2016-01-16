@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using IonicPack.Schema;
 using Microsoft.Html.Editor.Completion;
 using Microsoft.Html.Editor.Completion.Def;
 using Microsoft.VisualStudio.Utilities;
 
-namespace IonicPack.Completion
+namespace IonicPack.HTML
 {
-    [HtmlCompletionProvider(CompletionTypes.Values, "*", "*")]
+    [HtmlCompletionProvider(CompletionTypes.Attributes, "*")]
     [ContentType("htmlx")]
-    class AttributeValueCompletion : CompletionBase
+    class AttributeCompletion : CompletionBase
     {
         public override string CompletionType
         {
-            get { return CompletionTypes.Values; }
+            get { return CompletionTypes.Attributes; }
         }
 
         public override IList<HtmlCompletion> GetEntries(HtmlCompletionContext context)
         {
             var list = new List<HtmlCompletion>();
             string tagName = context.Element.Name.ToLowerInvariant();
-            string attrName = context.Attribute.Name.ToLowerInvariant();
-
 
             var all = HtmlCache.Elements.Single(e => e.Name == "*").Attributes.ToList();
 
@@ -46,9 +42,7 @@ namespace IonicPack.Completion
                 }
             }
 
-            var attr = attributes.SingleOrDefault(a => a.Name == attrName);
-
-            return AddAttributeValues(context, attr?.Values);
+            return AddEntries(context, attributes);
         }
     }
 }

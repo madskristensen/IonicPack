@@ -15,5 +15,7 @@
     </Installation>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" Path="|%CurrentProject%|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="HTML\Snippets\snippets.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="JavaScript\Snippets\snippets.pkgdef" />
     </Assets>
 </PackageManifest>

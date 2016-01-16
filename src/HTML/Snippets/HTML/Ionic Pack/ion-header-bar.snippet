@@ -1,0 +1,30 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ion-header-bar</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ion-header-bar</Shortcut>
+        <Description>Header which is fixed at top of the screen.</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>type</ID>
+                <ToolTip>The type of header bar</ToolTip>
+                <Default>stable</Default>
+            </Literal>
+            <Literal>
+                <ID>title</ID>
+                <ToolTip>The title of the header</ToolTip>
+                <Default>title</Default>
+            </Literal>
+        </Declarations>
+        <Code Language="HTML">
+            <![CDATA[<div class="bar bar-header bar-$type$">
+    <h1 class="title">$title$</h1>
+</div>$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

@@ -18,27 +18,29 @@ namespace IonicPack.JavaScript
         static string _path = Environment.ExpandEnvironmentVariables(@"%localappdata%\Microsoft\FSPCache\");
         static bool _hasRun;
 
-        public void VsTextViewCreated(IVsTextView textViewAdapter)
+        public async void VsTextViewCreated(IVsTextView textViewAdapter)
         {
             if (!_hasRun)
             {
-                Task.Run(() =>
-                {
-                    MoveFile();
-                });
-
+                _hasRun = true;
+                await MoveFile();
             }
-            _hasRun = true;
         }
 
-        static void MoveFile()
+        static async Task MoveFile()
         {
             string assembly = Assembly.GetExecutingAssembly().Location;
             string folder = Path.GetDirectoryName(assembly);
-            string source = Path.Combine(folder, "JavaScript\\ionic.bundle.intellisense.js");
+            string sourcePath = Path.Combine(folder, "JavaScript\\Completion\\ionic.bundle.intellisense.js");
+            string destinationPath = Path.Combine(_path, Path.GetFileName(sourcePath));
 
-            string destination = Path.Combine(_path, Path.GetFileName(source));
-            File.Copy(source, destination, true);
+            using (Stream source = File.Open(sourcePath, FileMode.Open))
+            {
+                using (Stream destination = File.Create(destinationPath))
+                {
+                    await source.CopyToAsync(destination);
+                }
+            }
         }
     }
 }

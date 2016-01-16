@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using IonicPack.Schema;
 using Microsoft.Html.Editor.Completion;
 using Microsoft.Html.Editor.Completion.Def;
 using Microsoft.VisualStudio.Utilities;
 
-namespace IonicPack.Completion
+namespace IonicPack.HTML
 {
     [HtmlCompletionProvider(CompletionTypes.Children, "*")]
     [ContentType("htmlx")]

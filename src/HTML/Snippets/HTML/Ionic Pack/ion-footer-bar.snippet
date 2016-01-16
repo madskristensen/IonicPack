@@ -1,0 +1,30 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ion-footer-bar</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ion-footer-bar</Shortcut>
+        <Description>Footers are regions at the bottom of a screen that can contain various types of content.</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>type</ID>
+                <ToolTip>The type of header bar</ToolTip>
+                <Default>stable</Default>
+            </Literal>
+            <Literal>
+                <ID>title</ID>
+                <ToolTip>The title of the header</ToolTip>
+                <Default>title</Default>
+            </Literal>
+        </Declarations>
+        <Code Language="HTML">
+            <![CDATA[<div class="bar bar-footer bar-$type$">
+    <div class="title">$title$</div>
+</div>$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

@@ -38,4 +38,6 @@ When wring JavaScript, the edtiing is beefed up to
 give even better and more precise Intellisense and tooltips
 for projects consuming _ionic.bundle.js_
 
+### Intellisense
+
 [screenshot pending...]

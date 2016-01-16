@@ -5,13 +5,12 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using IonicPack.Schema;
 using Microsoft.Html.Editor.Completion;
 using Microsoft.Html.Editor.Completion.Def;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.Web.Editor.Imaging;
 
-namespace IonicPack.Completion
+namespace IonicPack.HTML
 {
     abstract class CompletionBase : IHtmlCompletionListProvider
     {
@@ -26,7 +25,7 @@ namespace IonicPack.Completion
         {
             string assembly = Assembly.GetExecutingAssembly().Location;
             string folder = Path.GetDirectoryName(assembly);
-            string path = Path.Combine(folder, "resources\\completion.png");
+            string path = Path.Combine(folder, "HTML\\Completion\\icon.png");
 
             Uri uri = new Uri(path);
             return BitmapFrame.Create(uri);
