@@ -56,13 +56,7 @@
       <Link>Resources\LICENSE</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippets\Html\Ionic Pack\ion-checkbox.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippets\Html\Ionic Pack\ion-checkbox.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Snippets\Html\Ionic Pack\_default.png">
+    <Content Include="Resources\completion.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="JavaScript\ionic.bundle.intellisense.js">
@@ -75,11 +69,6 @@
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="snippets.pkgdef">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Html.Core">

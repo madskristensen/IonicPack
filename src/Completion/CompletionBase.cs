@@ -27,7 +27,7 @@ namespace IonicPack.Completion
         {
             string assembly = Assembly.GetExecutingAssembly().Location;
             string folder = Path.GetDirectoryName(assembly);
-            string path = Path.Combine(folder, "snippets\\html\\ionic pack\\_default.png");
+            string path = Path.Combine(folder, "resources\\completion.png");
 
             Uri uri = new Uri(path);
             return BitmapFrame.Create(uri);

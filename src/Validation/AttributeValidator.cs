@@ -27,24 +27,25 @@ namespace IonicPack.Validation
 
             var match = HtmlCache.Elements.SingleOrDefault(e => e.Name.Equals(element.Name, StringComparison.OrdinalIgnoreCase));
 
-            if (match != null)
+            if (match != null && match.Attributes != null)
                 attributes.AddRange(match.Attributes);
 
             foreach (HtmlAttribute htmlAttr in attributes)
             {
                 var attrNode = element.GetAttribute(htmlAttr.Name);
-                string error;
 
                 if (attrNode == null)
                     continue;
 
                 int index = element.GetAttributeIndex(attrNode.Name);
+                string error;
 
                 if (!IsTypeValid(attrNode.Value, htmlAttr, out error))
                 {
                     results.AddAttributeError(element, error, HtmlValidationErrorLocation.AttributeValue, index);
                 }
-                else if (!IsRequireValid(htmlAttr, element, out error))
+
+                if (!IsRequireValid(htmlAttr, element, out error))
                 {
                     results.AddAttributeError(element, error, HtmlValidationErrorLocation.AttributeName, index);
                 }

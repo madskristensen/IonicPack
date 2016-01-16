@@ -1,6 +1,6 @@
-# Ionic Snippet Pack for Visual Studio
+# Ionic Pack for Visual Studio
 
-[![Build status](https://ci.appveyor.com/api/projects/status/qogg94i8nry0g0j7?svg=true)](https://ci.appveyor.com/project/madskristensen/javascriptsnippetpack)
+[![Build status](https://ci.appveyor.com/api/projects/status/2ol794y2fuji0l9m?svg=true)](https://ci.appveyor.com/project/madskristensen/ionicpack)
 
 Download this extension from the
 [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/423eb4a3-215f-4a8f-9287-1512618ffda3)
@@ -9,7 +9,7 @@ or get the
 
 -----------------------------------------
 
-A snippet pack to make you more productive working with
+A set of tools to make you more productive working with
 the Ionic Framework for Apache Cordova.
 
 ## Intellisense
@@ -18,9 +18,11 @@ editor.
 
 ![Intellisense](art/intellisense.png)
 
-This extension ships a bunch of useful code snippets for
-the HTML editor. Get an overview from the
-**Code Snippet Manager** in Visual Studio located under
-the **Tools** top level menu.
+Also attribute values have Intellisense.
 
-![Snippet manager](art/snippet-manager.png)
+![Attribute values](art/intellisense-attribute-values.png)
+
+## Validation
+The validation helps identify common mistakes and typos.
+
+![Validation](art/validation.png)

@@ -18,7 +18,7 @@ namespace IonicPack.Completion
 
         public override IList<HtmlCompletion> GetEntries(HtmlCompletionContext context)
         {
-            return AddEntries(context, HtmlCache.Elements.Where(elem => elem.Name != "*"));
+            return AddEntries(context, HtmlCache.Elements.Where(elem => elem.Type != "existing"));
         }
     }
 }

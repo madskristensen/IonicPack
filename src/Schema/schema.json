@@ -2,6 +2,7 @@
 [
   {
     "name": "*",
+    "type": "existing",
     "attributes": [
       {
         "name": "collection-repeat",
@@ -60,6 +61,66 @@
         "description": "Disables the tap for an element and all of its children elements",
         "type": "boolean",
         "values": [ "true", "false" ]
+      },
+      {
+        "name": "on-hold",
+        "description": "Touch stays at the same location for 500ms. Similar to long touch events available for AngularJS and jQuery."
+      },
+      {
+        "name": "on-tap",
+        "description": "Quick touch at a location. If the duration of the touch goes longer than 250ms it is no longer a tap gesture."
+      },
+      {
+        "name": "on-double-tap",
+        "description": "Double tap touch at a location."
+      },
+      {
+        "name": "on-touch",
+        "description": "Called immediately when the user first begins a touch. This gesture does not wait for a touchend/mouseup."
+      },
+      {
+        "name": "on-release",
+        "description": "Called when the user ends a touch."
+      },
+      {
+        "name": "on-drag",
+        "description": "Move with one touch around on the page. Blocking the scrolling when moving left and right is a good practice. When all the drag events are blocking you disable scrolling on that area."
+      },
+      {
+        "name": "on-drag-up",
+        "description": "Called when the element is dragged up."
+      },
+      {
+        "name": "on-drag-right",
+        "description": "Called when the element is dragged to the right."
+      },
+      {
+        "name": "on-drag-down",
+        "description": "Called when the element is dragged down."
+      },
+      {
+        "name": "on-drag-left",
+        "description": "Called when the element is dragged to the left."
+      },
+      {
+        "name": "on-swipe",
+        "description": "Called when a moving touch has a high velocity in any direction."
+      },
+      {
+        "name": "on-swipe-up",
+        "description": "Called when a moving touch has a high velocity moving up."
+      },
+      {
+        "name": "on-swipe-right",
+        "description": "Called when a moving touch has a high velocity moving to the right."
+      },
+      {
+        "name": "on-swipe-down",
+        "description": "Called when a moving touch has a high velocity moving down."
+      },
+      {
+        "name": "on-swipe-left",
+        "description": "Called when a moving touch has a high velocity moving to the left."
       }
     ]
   },
@@ -251,11 +312,33 @@
   },
   {
     "name": "ion-header-bar",
-    "description": ""
+    "description": "Adds a fixed header bar above some content.",
+    "attributes": [
+      {
+        "name": "align-title",
+        "description": "How to align the title. By default the title will be aligned the same as how the platform aligns its titles (iOS centers titles, Android aligns them left).",
+        "type": "enum",
+        "values": [ "left", "right", "center" ]
+      },
+      {
+        "name": "no-tap-scroll",
+        "description": "By default, the header bar will scroll the content to the top when tapped. Set no-tap-scroll to true to disable this behavior.",
+        "type": "enum",
+        "values": [ "true", "false" ]
+      }
+    ]
   },
   {
     "name": "ion-footer-bar",
-    "description": ""
+    "description": "Adds a fixed footer bar below some content.",
+    "attributes": [
+      {
+        "name": "align-title",
+        "description": "How to align the title.",
+        "type": "enum",
+        "values": [ "left", "right", "center" ]
+      }
+    ]
   },
   {
     "name": "ion-nav-view",
