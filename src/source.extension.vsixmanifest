@@ -4,7 +4,7 @@
         <Identity Id="dcf84938-593b-49d8-9dff-d6014632e44e" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
         <DisplayName>Ionic Pack</DisplayName>
         <Description xml:space="preserve">An extension to make you more productive working with the Ionic Framework</Description>
-        <MoreInfo>https://github.com/madskristensen/IonicSnippetPack</MoreInfo>
+        <MoreInfo>https://github.com/madskristensen/IonicPack</MoreInfo>
         <License>Resources\LICENSE</License>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Preview.png</PreviewImage>

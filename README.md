@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/2ol794y2fuji0l9m?svg=true)](https://ci.appveyor.com/project/madskristensen/ionicpack)
 
 Download this extension from the
-[VS Gallery](https://visualstudiogallery.msdn.microsoft.com/423eb4a3-215f-4a8f-9287-1512618ffda3)
+[VS Gallery](https://visualstudiogallery.msdn.microsoft.com/d6279fba-bcff-4857-906d-29faa8a99448)
 or get the
 [nightly build](http://vsixgallery.com/extension/dcf84938-593b-49d8-9dff-d6014632e44e/).
 
@@ -11,6 +11,8 @@ or get the
 
 A set of tools to make you more productive working with
 the Ionic Framework for Apache Cordova.
+
+See the [changelog](CHANGELOG.md) for changes and roadmap.
 
 ## HTML
 
