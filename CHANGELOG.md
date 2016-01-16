@@ -1,6 +1,7 @@
 # Roadmap
 
-- [ ] Improve JavaScript Intellisense file
+- [ ] JavaScript Intellisense enhancements
+- [ ] Add screenshot of JS intellisense to <readme.md>
 - [ ] Add missing descriptions to HTML elements
 
 Features that have a checkmark are complete and available for
@@ -19,4 +20,3 @@ on the official Visual Studio extension gallery.
 - [x] Initial version
 - [x] HTML Intellisense for Ionic directives
 - [x] HTML validation of Ionic attribute values
-- [x] JavaScript basic Intellisense support
