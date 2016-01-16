@@ -33,6 +33,13 @@ and move on.
 
 ![Validation](art/validation.png)
 
+### Snippets
+Snippets makes it easy to scaffold markup components. They
+appear in the regular HTML element Intellisenese and you
+can easily identify them by their Ionic snippet icon.
+
+![HTML snippets](art/html-snippets.png)
+
 ## JavaScript
 When wring JavaScript, the edtiing is beefed up to
 give even better and more precise Intellisense and tooltips
@@ -40,4 +47,11 @@ for projects consuming _ionic.bundle.js_
 
 ### Intellisense
 
-[screenshot pending...]
+[Descriptions and screenshot pending...]
+
+### Snipppets
+Snippets makes it easy to scaffold scripted components. 
+They appear in the regular JavaScript Intellisenese and
+they all start with the word _ion_ followed by name.
+
+![JavaScript snippets](art/javascript-snippets.png)
