@@ -12,17 +12,28 @@ or get the
 A set of tools to make you more productive working with
 the Ionic Framework for Apache Cordova.
 
-## Intellisense
+## HTML
+
+### Intellisense
 It adds Intellisense for the Ionic directives in the HTML
 editor.
 
 ![Intellisense](art/intellisense.png)
 
-Also attribute values have Intellisense.
+Also attribute and attribute values have Intellisense.
 
 ![Attribute values](art/intellisense-attribute-values.png)
 
-## Validation
-The validation helps identify common mistakes and typos.
+### Validation
+The validation helps identify common mistakes and typos
+directly in the editor, so you can quickly fix them
+and move on.
 
 ![Validation](art/validation.png)
+
+## JavaScript
+When wring JavaScript, the edtiing is beefed up to
+give even better and more precise Intellisense and tooltips
+for projects consuming _ionic.bundle.js_
+
+[screenshot pending...]
