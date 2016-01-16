@@ -1,7 +1,7 @@
 # Roadmap
 
 - [ ] JavaScript Intellisense enhancements
-- [ ] Add screenshot of JS intellisense to [readme](README.md)
+- [ ] Add screenshot of JS intellisense to [readme](README.md#javascript)
 - [ ] Add missing descriptions to HTML elements
 
 Features that have a checkmark are complete and available for
