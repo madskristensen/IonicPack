@@ -42,11 +42,13 @@ namespace IonicPack.HTML
                 if (!IsTypeValid(attrNode.Value, htmlAttr, out error))
                 {
                     results.AddAttributeError(element, error, HtmlValidationErrorLocation.AttributeValue, index);
+                    Telemetry.TrackEvent("HTML: Attribute type invalid");
                 }
 
                 if (!IsRequireValid(htmlAttr, element, out error))
                 {
                     results.AddAttributeError(element, error, HtmlValidationErrorLocation.AttributeName, index);
+                    Telemetry.TrackEvent("HTML: Missing required attribute");
                 }
             }
 

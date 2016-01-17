@@ -3,8 +3,6 @@
 - [ ] JavaScript Intellisense enhancements
 - [ ] Add screenshot of JS intellisense to [readme](README.md#javascript)
 - [ ] Add missing JavaScript snippets
-- [ ] Implement telemetry
-- [ ] Implement logging
 
 Features that have a checkmark are complete and available for
 download in the
@@ -24,3 +22,5 @@ on the official Visual Studio extension gallery.
 - [x] HTML Intellisense for Ionic directives
 - [x] HTML validation of Ionic attribute values
 - [x] JavaScript snippets infrastructure
+- [x] Implement telemetry
+- [x] Implement logging

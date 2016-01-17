@@ -43,11 +43,12 @@ namespace IonicPack.JavaScript
                 if (!File.Exists(dest) || File.GetLastWriteTime(source) > File.GetLastWriteTime(dest))
                 {
                     File.Copy(source, dest);
+                    Telemetry.TrackEvent("JS: Copied Intellisense file");
                 }
             }
             catch (Exception ex)
             {
-                // Implement logging
+                Logger.Log(ex);
             }
         }
     }
