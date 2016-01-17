@@ -337,6 +337,11 @@
         "description": "How to align the title.",
         "type": "enum",
         "values": [ "left", "right", "center" ]
+      },
+      {
+        "name": "keyboard-attach",
+        "description": "keyboard-attach is an attribute directive which will cause an element to float above the keyboard when the keyboard shows.",
+        "type": "string"
       }
     ]
   },

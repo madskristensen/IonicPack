@@ -3,7 +3,6 @@
 - [ ] JavaScript Intellisense enhancements
 - [ ] Add screenshot of JS intellisense to [readme](README.md#javascript)
 - [ ] Add missing JavaScript snippets
-- [ ] Add missing HTML snippets
 
 Features that have a checkmark are complete and available for
 download in the
