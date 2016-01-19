@@ -37,12 +37,14 @@ namespace IonicPack.JavaScript
             {
                 string assembly = Assembly.GetExecutingAssembly().Location;
                 string folder = Path.GetDirectoryName(assembly);
-                string source = Path.Combine(folder, "JavaScript\\Completion\\ionic.bundle.intellisense.js");
-                string dest = Path.Combine(_path, Path.GetFileName(source));
+                var source = new FileInfo(Path.Combine(folder, "JavaScript\\Completion\\ionic.bundle.intellisense.js"));
+                var dest = new FileInfo(Path.Combine(_path, source.Name));
 
-                if (!File.Exists(dest) || File.GetLastWriteTime(source) > File.GetLastWriteTime(dest))
+                if (!dest.Exists || source.LastWriteTime > dest.LastWriteTime)
                 {
-                    File.Copy(source, dest);
+                    Directory.CreateDirectory(_path);
+
+                    source.CopyTo(dest.FullName);
                     Telemetry.TrackEvent("JS: Copied Intellisense file");
                 }
             }
