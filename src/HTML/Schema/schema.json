@@ -746,5 +746,47 @@
         "type": "expression"
       }
     ]
+  },
+  {
+    "name": "ion-checkbox",
+    "description": "The checkbox is no different than the HTML checkbox input, except it's styled differently."
+  },
+  {
+    "name": "ion-radio",
+    "description": "The radio directive is no different than the HTML radio input, except it's styled differently.",
+    "attributes": [
+      {
+        "name": "name",
+        "description": "The name of the radio input.",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "description": "The value of the radio input.",
+        "type": "expression"
+      },
+      {
+        "name": "disabled",
+        "description": "The state of the radio input.",
+        "type": "boolean",
+        "values": [ "true", "false" ]
+      },
+      {
+        "name": "icon",
+        "description": "The icon to use when the radio input is selected.",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "ion-toggle",
+    "description": "A toggle is an animated switch which binds a given model to a boolean.",
+    "attributes": [
+      {
+        "name": "toggle-class",
+        "description": "Sets the CSS class on the inner label.toggle element created by the directive.",
+        "type": "string"
+      }
+    ]
   }
 ]

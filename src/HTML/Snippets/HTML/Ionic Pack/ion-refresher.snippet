@@ -1,0 +1,31 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ion-refresher</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ion-refresher</Shortcut>
+        <Description>A code snippet for the ion-refresher element.</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>text</ID>
+                <ToolTip>The refresh text</ToolTip>
+                <Default>Pull to refresh...</Default>
+            </Literal>
+            <Literal>
+                <ID>function</ID>
+                <ToolTip>A JavaScript function to execute.</ToolTip>
+                <Default>doRefresh()</Default>
+            </Literal>
+        </Declarations>
+        <Code Language="HTML">
+            <![CDATA[<ion-refresher
+  pulling-text="$refresh$"
+  on-refresh="$function$">
+</ion-refresher>$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

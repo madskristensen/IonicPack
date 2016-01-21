@@ -1,0 +1,44 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ion-radio</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ion-radio</Shortcut>
+        <Description>A code snippet for the ion-radio element.</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal>
+                <ID>model</ID>
+                <ToolTip>The name of the model to bind to</ToolTip>
+                <Default>isChecked</Default>
+            </Literal>
+            <Literal>
+                <ID>value1</ID>
+                <ToolTip>The value of the radio button.</ToolTip>
+                <Default>Label</Default>
+            </Literal>
+            <Literal>
+                <ID>value2</ID>
+                <ToolTip>The value of the radio button.</ToolTip>
+                <Default>Label</Default>
+            </Literal>
+            <Literal>
+                <ID>label1</ID>
+                <ToolTip>The label for the radio button.</ToolTip>
+                <Default>Label</Default>
+            </Literal>
+            <Literal>
+                <ID>label2</ID>
+                <ToolTip>The label for the radio button.</ToolTip>
+                <Default>Label</Default>
+            </Literal>
+        </Declarations>
+        <Code Language="HTML">
+            <![CDATA[<ion-radio ng-model="$model$" ng-value="'$value1$'">$label1$</ion-radio>
+<ion-radio ng-model="$model$" ng-value="'$value2$'">$label2$</ion-radio>$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>
