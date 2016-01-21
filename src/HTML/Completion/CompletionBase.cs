@@ -15,7 +15,7 @@ namespace IonicPack.HTML
     abstract class CompletionBase : IHtmlCompletionListProvider
     {
         ImageSource _icon = GetIcon();
-        ImageSource _glyph = GlyphService.GetGlyph(StandardGlyphGroup.GlyphGroupField, StandardGlyphItem.GlyphItemPublic);
+        readonly ImageSource _glyph = GlyphService.GetGlyph(StandardGlyphGroup.GlyphGroupField, StandardGlyphItem.GlyphItemPublic);
 
         public abstract string CompletionType { get; }
 
@@ -27,7 +27,7 @@ namespace IonicPack.HTML
             string folder = Path.GetDirectoryName(assembly);
             string path = Path.Combine(folder, "HTML\\Completion\\icon.png");
 
-            Uri uri = new Uri(path);
+            var uri = new Uri(path);
             return BitmapFrame.Create(uri);
         }
 

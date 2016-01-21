@@ -33,7 +33,7 @@ public static class Telemetry
         }
 
         _events = dte.Events.DTEEvents;
-        _events.OnBeginShutdown += delegate { _telemetry.Flush(); };
+        _events.OnBeginShutdown += _telemetry.Flush;
 
         Enabled = true;
     }
@@ -41,7 +41,7 @@ public static class Telemetry
     /// <summary>Initializes the telemetry client.</summary>
     public static void Initialize(IServiceProvider serviceProvider, string version, string telemetryKey)
     {
-        DTE2 dte = (DTE2)serviceProvider.GetService(typeof(DTE));
+        var dte = (DTE2)serviceProvider.GetService(typeof(DTE));
         Initialize(dte, version, telemetryKey);
     }
 

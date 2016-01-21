@@ -15,7 +15,6 @@ public static class Logger
         _name = name;
     }
 
-    [SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane.OutputString(System.String)")]
     public static void Log(string message)
     {
         if (string.IsNullOrEmpty(message))
@@ -28,7 +27,9 @@ public static class Logger
                 pane.OutputString(DateTime.Now.ToString() + ": " + message + Environment.NewLine);
             }
         }
+#pragma warning disable RECS0022 // A catch clause that catches System.Exception and has an empty body
         catch
+#pragma warning restore RECS0022 // A catch clause that catches System.Exception and has an empty body
         {
             // Do nothing
         }
@@ -48,7 +49,7 @@ public static class Logger
         if (pane == null)
         {
             Guid guid = Guid.NewGuid();
-            IVsOutputWindow output = (IVsOutputWindow)_provider.GetService(typeof(SVsOutputWindow));
+            var output = (IVsOutputWindow)_provider.GetService(typeof(SVsOutputWindow));
             output.CreatePane(ref guid, _name, 1, 1);
             output.GetPane(ref guid, out pane);
         }

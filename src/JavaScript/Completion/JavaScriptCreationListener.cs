@@ -15,7 +15,7 @@ namespace IonicPack.JavaScript
     [TextViewRole(PredefinedTextViewRoles.Document)]
     class JavaScriptCreationListener : IVsTextViewCreationListener
     {
-        static string _path = Environment.ExpandEnvironmentVariables(@"%localappdata%\Microsoft\FSPCache\");
+        static readonly string _path = Environment.ExpandEnvironmentVariables(@"%localappdata%\Microsoft\FSPCache\");
         static bool _hasRun;
 
         public void VsTextViewCreated(IVsTextView textViewAdapter)
