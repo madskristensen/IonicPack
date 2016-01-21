@@ -20,18 +20,18 @@ See the [changelog](CHANGELOG.md) for changes and roadmap.
 It adds Intellisense for the Ionic directives in the HTML
 editor.
 
-![Intellisense](art/intellisense.png)
+![HTML Intellisense](art/html-intellisense.png)
 
 Also attribute and attribute values have Intellisense.
 
-![Attribute values](art/intellisense-attribute-values.png)
+![Attribute values](art/html-intellisense-attribute-values.png)
 
 ### Validation
 The validation helps identify common mistakes and typos
 directly in the editor, so you can quickly fix them
 and move on.
 
-![Validation](art/validation.png)
+![HTML Validation](art/html-validation.png)
 
 ### Snippets
 Snippets makes it easy to scaffold markup components. They
