@@ -56,3 +56,7 @@ They appear in the regular JavaScript Intellisenese and
 they all start with the word _ion_ followed by name.
 
 ![JavaScript snippets](art/javascript-snippets.png)
+
+## License
+
+[Apache 2.0](LICENSE)
