@@ -1,0 +1,24 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <Header>
+        <Title>ionBackdrop</Title>
+        <Author>Mads Kristensen</Author>
+        <Shortcut>ionBackdrop</Shortcut>
+        <Description>An Ionic Backdrop snippet</Description>
+        <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Code Language="JavaScript">
+            <![CDATA[function MyController($$scope, $$ionicBackdrop, $$timeout) {
+  //Show a backdrop for one second
+  $$scope.action = function() {
+    $$ionicBackdrop.retain();
+    $$timeout(function() {
+      $$ionicBackdrop.release();
+    }, 1000);
+  };
+}$end$]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

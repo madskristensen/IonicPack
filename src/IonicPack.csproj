@@ -97,6 +97,15 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\VSPackage.ico" />
+    <Content Include="JavaScript\Snippets\JavaScript\Ionic Pack\ionActionSheet.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="JavaScript\Snippets\JavaScript\Ionic Pack\ionBackdrop.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="JavaScript\Snippets\JavaScript\Ionic Pack\ionPopover.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="packages.config" />
     <Content Include="HTML\Snippets\HTML\Ionic Pack\ion-header-bar.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
