@@ -1,7 +1,6 @@
 # Roadmap
 
-- [ ] Add screenshot of JavaScript Intellisense to [readme](README.md#javascript)
-  - Light theme, font 14pt Consolas
+
 
 Features that have a checkmark are complete and available for
 download in the

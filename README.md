@@ -46,7 +46,9 @@ give even better and more precise Intellisense and tooltips
 for projects consuming _ionic.bundle.js_
 
 ### Intellisense
-[Descriptions and screenshot coming soon...]
+Intellisense for JavaScript is also provided.
+
+![JavaScript Intellisense](art/javascript-intellisense.png)
 
 ### Snipppets
 Snippets makes it easy to scaffold scripted components. 
