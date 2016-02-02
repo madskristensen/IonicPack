@@ -14,6 +14,10 @@ the Ionic Framework for Apache Cordova.
 
 See the [changelog](CHANGELOG.md) for changes and roadmap.
 
+**Note!** If you have ReSharper installed, you may
+have to disable it to get any HTML Intellisense from
+this extension.
+
 ## HTML
 
 ### Intellisense

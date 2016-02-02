@@ -1,13 +1,12 @@
 using System;
-using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Shell.Interop;
 
 public static class Logger
 {
-    private static IVsOutputWindowPane pane;
-    private static object _syncRoot = new object();
-    private static IServiceProvider _provider;
-    private static string _name;
+    static IVsOutputWindowPane pane;
+    static object _syncRoot = new object();
+    static IServiceProvider _provider;
+    static string _name;
 
     public static void Initialize(IServiceProvider provider, string name)
     {
@@ -44,7 +43,7 @@ public static class Logger
         }
     }
 
-    private static bool EnsurePane()
+    static bool EnsurePane()
     {
         if (pane == null)
         {
