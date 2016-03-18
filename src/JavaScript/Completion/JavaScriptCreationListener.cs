@@ -42,9 +42,9 @@ namespace IonicPack.JavaScript
 
                 if (!dest.Exists || source.LastWriteTime > dest.LastWriteTime)
                 {
-                    Directory.CreateDirectory(_path);
+                    Microsoft.VisualStudio.Shell.PackageUtilities.EnsureOutputPath(_path);
 
-                    source.CopyTo(dest.FullName);
+                    source.CopyTo(dest.FullName, true);
                     Telemetry.TrackEvent("JS: Copied Intellisense file");
                 }
             }
