@@ -15,8 +15,7 @@ namespace IonicPack
 
         protected override void Initialize()
         {
-            Logger.Initialize(this, Vsix.Name);
-            Telemetry.Initialize(this, Vsix.Version, "527270b3-08af-45b4-a972-4d63b52b2a58");
+            Logger.Initialize(this, Vsix.Name, Vsix.Version, "527270b3-08af-45b4-a972-4d63b52b2a58");
 
             base.Initialize();
         }
