@@ -45,7 +45,6 @@ namespace IonicPack.JavaScript
                     Microsoft.VisualStudio.Shell.PackageUtilities.EnsureOutputPath(_path);
 
                     source.CopyTo(dest.FullName, true);
-                    Telemetry.TrackEvent("JS: Copied Intellisense file");
                 }
             }
             catch (Exception ex)
